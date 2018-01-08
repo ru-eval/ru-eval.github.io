@@ -1,0 +1,181 @@
+
+<!doctype html>
+<html lang="ru">
+  <head>
+	<meta http-equiv="Content-Language" content="Russian" />
+	<meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PlagEval. RU-EVAL: Evaluation of Russian NLP tools</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+      <header>
+        <h1><a href="index.html">ru-eval: оценка методов автоматического анализа текстов</a></h1>
+        <p></p>
+
+        <ul>
+          <li style="width: 70px;" ><a href="about.html"><strong>Задачи</strong></a></li>
+          <li style="width: 98px;" ><a href="morpho.html"><strong>Морфология</strong></a></li>
+          <li style="width: 85px;" ><a href="syntax.html"><strong>Синтаксис</strong></a></li>
+          <li style="width: 50px;" ><a href="ner.html"><strong>NER</strong></a></li>
+          <li style="width: 75px;" ><a href="anaphora.html"><strong>Анафора</strong></a></li>
+          <li style="width: 95px;" ><a href="sentiment.html"><strong>Тональность</strong></a></li>
+          <li style="width: 115px;" ><a href="plageval.html"><strong>Заимствования</strong></a></li>
+          <li style="width: 60px;" ><a href="other.html"><strong>Другое</strong></a></li>
+          <li style="width: 92px;" ><a href="resources.html"><strong>Материалы</strong></a></li>
+        </ul>
+
+      </header>
+	<p><a href="#about">Общая информация</a> -- <a href="#tracks">Дорожки</a> -- <a href="#train">Коллекции</a> -- <a href="#todo">Задачи</a> -- <a href="#scores">Метрики</a>
+	<section>
+		<a name="about"></a>
+		<h3>Поиск заимствований: PlagEvalRus 2016-2017</h3>
+		<article>
+			<p><time datetime="2017">2016-2017</time> Семинар по оценке алгоритмов поиска заимствований в текстах на русском языке проводится в 2016-2017 г.</p>
+ 			<p><strong>Официальная страница семинара</strong>: <a href="http://ru-eval.ru/plageval">http://ru-eval.ru/plageval</a></p>
+ 			<p><strong>Контактный адрес</strong>: plagevalrus@gmail.com</p>
+ 			<p><strong>Google-группа участников</strong>: <a href="https://groups.google.com/forum/#!forum/plagevalrus2017">https://groups.google.com/forum/#!forum/plagevalrus2017</a></p>
+			<p><strong>Дедлайн</strong>: Приглашаем участников подать заявку на любом этапе соревнований до подачи результатов.
+		</article>
+		<article>
+			<p><strong>Данные для обучения и тестирования</strong> алгоритмов доступны по адресу: <a href="https://cloud.mail.ru/public/9XXY/WAfXAWLnW">https://cloud.mail.ru/public/9XXY/WAfXAWLnW</a>. 
+			Подробное описание и инструкция по работе с данными доступны в разделе <a href="#train">Материалы</a> ниже. </p>
+		</article>
+		<article>
+			<a name="tracks"></a>
+			<h4>Дорожки</h4>
+			<p>В ходе тестирования планируется решение задачи поиска внешних заимствований (External Plagiarism Detection) в научных текстах (академический плагиат). Будут проведены следующие дорожки:</p>
+ 			<ul>
+ 				<li>Дорожка 1. Определение источника заимствования. Source detection.</li>
+ 				<li>Дорожка 1. Дословные заимствования: определение заимствованного фрагмента. Copy and paste (c&p) plagiarism detection.</li>
+				<li>Дорожка 2. Заимствования с парафразами: определение парафразированного фрагмента. Paraphrased plagiarism detection.</li>
+			</ul>
+			<p>Каждая дорожка представляет собой поисковое задание: в заданном тексте необходимо найти заимствованные фрагменты и для них указать тексты-источники заимствований из заданной коллекции источников. Участникам предоставляются коллекции текстов источников и обучающие данные по каждой дорожке.</p>
+		</article>
+		<article>
+			<h4>Ход тестирования и оценка результатов</h4>
+			<p>Перед тестированием участникам выдаётся набор заданий по каждой дорожке. Полученные ответы сравниваются с эталонными ответами, созданными организаторами. Заимствование считается успешно найденным, если фрагмент, найденный участником, вложен во фрагмент эталонного ответа или совпадает с ним. Найденные участниками заимствования, которые не указаны в эталонных ответах организаторов на контрольные задания, не будут учитываться при оценке.</p>
+		</article>
+		<article>
+			<h4>Примерный график проведения</h4>
+			<ul>
+				<li><i>сентябрь</i> - <i>декабрь</i>: подача заявок, разработка и настройка алгоритмов</li>
+				<li><i>январь</i>: тестовая сессия и подача результатов</li>
+				<li><i>февраль</i> - <i>март</i>: оценка результатов</li>
+				<li><i>апрель</i> - <i>май</i>: подготовка итогового отчета</li>
+				<li><i>июнь</i>: подведение итогов на конференции <a href="www.dialog-21.ru">Диалог</a></li>
+			</ul>
+			<p>Участниками предлагается подготовить статьи для публикации к концу февраля на основе самостоятельной оценки алгоритма. К марту будут доступны контрольные данные, и в окончательной версии статьи можно будет указать результаты независимой оценки в рамках семинара.</p>
+		</article>
+		<article>
+			<h4>Организаторы</h4>
+			<p>Иван Смирнов (Институт системного анализа ФИЦ ИУ РАН, Москва)<br />
+			Михаил Копотев (Хельсинкский университет, Финляндия)<br />
+			Андрей Кутузов (Университет Осло, Норвегия)<br />
+			Илья Соченков (Институт системного анализа ФИЦ ИУ РАН, Москва)<br />
+			Ольга Ляшевская (Высшая школа экономики, Москва)<br />
+			Рита Кузнецова (компания Антиплагиат)<br />
+			Олег Бахтеев (компания Антиплагиат)<br />
+			Dr. Мартин Поттхаст (основатель PAN, Digital Bauhaus Lab)<br />
+			Любовь Иванова (Высшая школа экономики, Москва, секретарь семинара)
+		</article>
+		<article>
+			<h4>При поддержке</h4>
+			<p><a href="http://pan.webis.de">PAN</a>, a network of experts on digital text forensics (http://pan.webis.de)<br />
+			   Международная конференция по компьютерной лингвистике и интеллектуальным технологиям <a href="http://dialog-21.ru">Диалог</a>
+			   <a href="http://cyberleninka.ru">Киберленинка: научная электронная библиотека открытого доступа</a>
+		</article>
+		<article>
+		<a name="train"></a>
+			<h4>Материалы</h4>
+			<ul>
+			<li>Первое организационное письмо <a href="http://www.dialog-21.ru/media/3876/information_letter_plageval.pdf">PDF</a></li>
+			<li>Анкета-заявка <a href="https://goo.gl/forms/8BK7ScHODmLcCfOF3">https://goo.gl/forms/8BK7ScHODmLcCfOF3</a></li>
+			<li>Коллекция для обучения: <a href="http://www.dialog-21.ru/media/3877/training_set_plageval.pdf">training set</a></li>
+		</article>
+		<article>
+			<p>Описание данных по папкам:</br />
+				1. source_retrieval – данные для дорожки поиска источников</br />
+		            src – источники возможных заимствований</br />
+        		    susp – тексты с заимствованиями из источников</br />
+		            tasks – файлы с информацией, сопоставляющей тексты с заимствованиями и источники заимствований</br />
+				</br />
+				2. text_alignment – данные для дорожки поиска заимствований в тексте</br />
+					sources – источники заимствований</br />
+					susp – тексты с заимствованиями из источников</br />
+					tasks – файлы с информацией, сопоставляющей заимствованные фрагменты текстов из susp с фрагментами из источников sources</br />
+				</br />
+				Задания сгруппированы в архивы по типу заимствований, например, generated_paraphrased означает данные для автоматически сгенерированных парафразированных заимствований. Там же доступна статья, в которой обсуждаются принципы создания парафразированных текстов, включенных в коллекцию. Коллекция уже сейчас достаточно представительная, но мы планируем пополнять ее в течение декабря-января. </p>
+		</article>
+		<article>
+		<a name="todo"></a>
+			<h4>Задачи</h4>
+			Для каждого типа заданий есть файл pairs. Этот файл перечисляет все пары подозрительных документов и источников, которые нужно сравнить друг с другом. Первая колонка в файле указывает на подозрительный документ (сам файл находится в директории susp), вторая колонка указывает на источник (файл находится в директории src).<br />
+			<br />
+			Программа обнаружения заимствований должна сгенерировать XML-файл suspicious-documentXYZ-source-documentABC.xml, который содержит метаинформацию об обнаруженных заимствованиях. Пример:<br />
+			<br />
+			<hr><span class="code"">
+			&lt;document reference="XYZ.txt"><br />
+			&lt;feature<br />
+			name="detected-plagiarism"<br />
+			this_offset="5"<br />
+			this_length="200"<br />
+			source_reference="ABC.txt"<br />
+			source_offset="100"<br />
+			source_length="150"<br />
+			/&gt;<br />
+			&lt;feature ... /&gt;<br />
+			...<br />
+			&lt;/document&gt;<br />
+			</span>
+			<br />
+			<hr>
+			В примере выше заимствованный текст в документе XYZ.txt начинается с 5-ого символа и имеет длину 200 символов. В источнике ABC.txt текст, который был заимствован, начинается с 100-ого символа и имеет длину 150 символов.<br />
+			В качестве базового метода (baseline) можно использовать <a href="http://www.uni-weimar.de/medien/webis/events/pan-12/pan12-code/pan12-text-alignment-baseline.py">программу</a>.<br />
+			<br />
+			Пример запуска:<br />
+			<hr><span class="code">
+			$ python pan12-text-alignment-baseline.py tasks/manually-paraphrased/pairs src susp manually-paraphrased-result<br />
+			</span><br /><hr>
+			С результатами базового метода можно сравнивать результаты своих методов.<br />
+			<br />
+		</article>
+		<article>
+		<a name="scores"></a>
+			<h4>Метрики</h4>
+			Для оценки качества обнаружения заимствований будут использоваться макро-усредненные точность, полнота и др. Подробнее прочитать про использованные метрики можно <a href="http://www.uni-weimar.de/medien/webis/publications/papers/stein_2010p.pdf#page=2">по ссылке</a>.<br />
+			Для оценки качества во время обучения можно использовать <a href="http://www.uni-weimar.de/medien/webis/events/pan-09/pan09-code/pan09-plagiarism-detection-performance-measures.py">скрипт</a><br />
+			<br />
+			Пример запуска:<br />
+			<hr><span class="code">
+			$ python pan09-plagiarism-detection-performance-measures.py -p tasks/manually-paraphrased/ -d manually-paraphrased-result/<br />
+			</span><br /><hr>
+			На этапе оценки прогонов участники должны будут сдать свои программы (скрипты), которые будут автоматически запускаться на платформе TIRA на закрытом множестве контрольных заданий. Программы будут запускаться следующим образом:<br />
+			<hr><span class="code">
+			mySoftware -i path/to/corpus -o path/to/output/directory<br />
+			</span><br /><hr>
+			На платформе TIRA участникам будет выделена персональная виртуальная машина, с одной из следующих ОС: Windows 7 или Ubuntu 12.04. Можно использовать любой язык программирования. Доступ к виртуальной машине будет организован через ssh или rdp. Детальная информация о работе с ВМ <a href="http://pan.webis.de/clef14/pan14-web/pan14-virtual-machine-user-guide.pdf">в инструкции</a>.<br />
+		</article>
+	</section>
+
+	  </div>
+	  <div id="footer">
+	  	<div style="float: right;">
+	  	    2015-2016 @ RU-EVAL team <br />
+            <span title="Лицензия CC BY-SA 4.0"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class="image"><img alt="" src="img/cc-by-sa.png" width="44" height="16" /></a></span>
+		</div>
+	        Портал создан при поддержке РФФИ, проект No 15-07-09306 "Стандарты оценки методов автоматического извлечения информации из текстов"
+	  </div>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+
+</html>
