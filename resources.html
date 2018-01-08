@@ -1,0 +1,147 @@
+
+<!doctype html>
+<html lang="ru">
+  <head>
+	<meta http-equiv="Content-Language" content="Russian" />
+	<meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Материалы. RU-EVAL: Evaluation of Russian NLP tools</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+      <header>
+        <h1>ru-eval: оценка методов автоматического анализа текстов</h1>
+        <p></p>
+
+        <ul>
+          <li style="width: 70px;" ><a href="about.html"><strong>Задачи</strong></a></li>
+          <li style="width: 98px;" ><a href="morpho.html"><strong>Морфология</strong></a></li>
+          <li style="width: 85px;" ><a href="syntax.html"><strong>Синтаксис</strong></a></li>
+          <li style="width: 50px;" ><a href="ner.html"><strong>NER</strong></a></li>
+          <li style="width: 75px;" ><a href="anaphora.html"><strong>Анафора</strong></a></li>
+          <li style="width: 95px;" ><a href="sentiment.html"><strong>Тональность</strong></a></li>
+          <li style="width: 115px;" ><a href="plageval.html"><strong>Заимствования</strong></a></li>
+          <li style="width: 60px;" ><a href="other.html"><strong>Другое</strong></a></li>
+          <li style="width: 92px;" ><a href="resources.html"><strong>Материалы</strong></a></li>
+        </ul>
+
+      </header>
+
+      <section>
+		<article>
+			<p>На этой странице вы можете найти информацию о полезных <a href="#res">ресурсах</a> и <a href="#publ">публикациях</a>, посвященных прошедшим соревнованиям.</p>
+		</article>
+		<a name="res"></a>
+		<h3>Ресурсы</h3>
+		
+	<article>
+		<h4>Конвертор морфологических тагсетов</h4>
+		<p>В разработке</p>
+	</article>
+	<article>
+		<h4>Корпуса со снятой морфологической неоднозначностью</h4>
+		<ul>
+			<li>Данные основного корпуса НКРЯ со снятой морфологической омонимией (1 млн словоупотреблений) <a href="http://ruscorpora.ru/corpora-usage.html">инструкция</a></li>
+			<li>Подкорпус со снятой омонимией <a href="http://opencorpora.org/?page=downloads">OpenCorpora</a></li>
+		</ul>
+	</article>
+	<article>
+		<h4>Корпуса со снятой синтаксической неоднозначностью</h4>
+		<ul>
+			<li>СинТагРус (800 тыс. словоупотреблений). Для приобретения бесплатной лицензии для академических и образовательных учреждений или лицензии для коммерческих организаций требуется связаться с авторами: <a href="mailto:iomdin@iitp.ru">iomdin@iitp.ru</a>, <a href="mailto:iomdin@iitp.ru">bogus@iitp.ru</a></li>
+			<li>Корпуса в формате Universal Dependencies: <a href="https://github.com/UniversalDependencies/UD_Russian-Syntagrus/">UD-SynTagRus</a> (1 млн. токенов) и <a href="https://github.com/UniversalDependencies/UD_Russian/">UD-Google</a> (0,1 млн. токенов)</li>
+		</ul>
+	</article>
+	<article>
+		<h4>N-грамы, коллокации</h4>
+		<ul>
+			<li><a href="http://ruscorpora.ru/corpora-freq.html">N-грамы НКРЯ</a> (частоты словоформ и словосочетаний)</li>
+			<li><a href="http://storage.googleapis.com/books/ngrams/books/datasetsv2.html">N-грамы Google Books, Russian</a> (частоты словоформ и словосочетаний)</li>
+			<li><a href="http://ling.go.mail.ru/static/ngrams.json.gz">Синтаксические биграмы НКРЯ</a> (на основе автоматически размеченного Основного корпуса НКРЯ, MaltParser)</li>
+			<li><a href=""http://storage.googleapis.com/books/ngrams/books/datasetsv2.html">Синтаксические N-грамы Google Books, Russian</a> ("зависимости")</li>
+			<li>Тестовые коллокации анафорического корпуса <a href="">TBA</a></li>
+		</ul>
+	</article>
+	<article>
+		<h4>Морфологические тагсеты</h4>
+		<p><a href="http://ruscorpora.ru/corpora-morph.html">НКРЯ</a> &bull; <a href="http://opencorpora.org/dict.php?act=gram">OpenCorpora</a> &bull; <a href="http://pymorphy2.readthedocs.org/en/latest/_modules/pymorphy2/tagset.html">PyMorphy2</a></p>
+	</article>
+	<article>
+		<h4>Синтаксические тагсеты</h4>
+		<p><a href="http://ruscorpora.ru/instruction-syntax.html">НКРЯ (СинТагРус), ЭТАП-3</a> &bull; <a href="http://www.isa.ru/proceedings/images/documents/2008-38/91-109.pdf">SyntAutom</a> &bull; <a href="http://pymorphy2.readthedocs.org/en/latest/_modules/pymorphy2/tagset.html">PyMorphy2</a></p>
+		<p>Сопоставительная таблица разметки особых синтаксических конструкций разными парсерами <a href="http://otipl.philol.msu.ru/~soiza/testsynt/files/var-synt.htm">&#8594;</a></p>
+	</article>
+	<article>
+		<h4>Инструменты для обработки и разметки текстов</h4>
+		<p><a href="http://web-corpora.net/wsgi/mystemplus.wsgi/mystemplus/">Mystem+</a> (морфологические разметчики Mystem, TreeTagger, TnT, Hunpos, MarMoT)</p>
+		<p><a href="https://tech.yandex.ru/mystem/">Mystem 3.0</a> (морфологический разметчик), <a href="https://github.com/Digsolab/pymystem3">PyMystem3</a> (в обертке для Python)</p>
+		<p><a href="http://starling.rinet.ru/morpho.php">StarLing</a> (морфологический разметчик)</p>
+		<p><a href="https://github.com/kmike/pymorphy2">PyMorphy 2</a> (морфологический разметчик)</p>
+		<p><a href="http://web-corpora.net/wsgi3/ru-syntax/upload">RU-Syntax</a> (онлайн-сервис для разметки морфологии и синтаксиса зависимостей)</p>
+		<p><a href="http://lindat.mff.cuni.cz/services/udpipe/run.php">UDpipe</a> (онлайн-сервис для разметки морфологии и синтаксиса зависимостей, модель, обученная на корпусе russian-syntagrus 2.0)</p>
+		<p><a href="http://www.aot.ru/onlinedemo.html">AOT</a> (онлайн демо: морфология, синтаксис составляющих, поверхностно-семантический граф)</p>
+		<p>Ресурсы для обработки русскоязычных текстов на <a href="https://nlpub.ru/%D0%9E%D0%B1%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0_%D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%B0">nlpub.ru</a></p>
+		<p>Ресурсы с сайта проекта <a href="http://otipl.philol.msu.ru/~soiza/testsynt/files/info-parse.htm">RSTB</a></p>		
+		<p>Ресурсы сайта <a href="http://web-corpora.net/">web-corpora</a> НИУ ВШЭ</p>		
+	</article>
+	<article>
+		<h4>Словарные ресурсы</h4>
+		<p>Грамматический словарь русского языка А. А. Зализняка (файл <a href="http://ru-eval.ru/go/data/zalizniak2003.xls.zip">xls</a>, <a href="http://ru-eval.ru/go/data/AspectualPairZalizniak.txt">txt</a>, на сайтах проектов <a href="http://starling.rinet.ru/morpho.php?lan=en">StarLing</a>, <a href="http://odict.ru/">odict.ru</a>)</p>
+		<p>Префиксальные видовые глагольные пары (база проекта <a href="http://emptyprefixes.uit.no/">Exploring Emptiness</a>)</p>		
+		<p>Суффиксальные видовые глагольные пары (по словарю А. А. Зализняка, файл <a href="http://ru-eval.ru/go/data/AspectualPairZalizniak.xls">xls</a>, <a href="http://ru-eval.ru/go/data/AspectualPairZalizniak.txt">txt</a>)</p>
+		<p><a href="http://www.slioussar.ru/verbdatabase.html">База</a> русских глаголов Н. Слюсарь (по словарю А. А. Зализняка)</p>
+	</article>
+	  </section>
+
+      <section>
+		<a name="publ"></a>
+        <h3>Публикации</h3>
+		<article>
+			<h4><time datetime="2015" pubdate>2015</time></h4>
+			<p>Toldova S., Nedoluzhko А., Novak M. Coreference Chains in Czech, English and Russian: Preliminary Findings // Компьютерная лингвистика и интеллектуальные технологии. По материалам ежегодной Международной конференции "Диалог" (2015), 2015. С. 474-486. <a href="http://www.dialog-21.ru/digests/dialog2015/materials/pdf/NedoluzhkoAetal.pdf">PDF</a></p>
+			<p>Toldova S., Lyashevskaya O., Bonch-Osmolovskaya A., Ionov M. Evaluation for morphologically rich language: Russian NLP // Proceedings of the International Conference on Artificial Intelligence (ICAI 2015). The Steering Committee of The World Congress in Computer Science, Computer Engineering and Applied Computing (WorldComp), 2015. P. 300-306. <a href="http://worldcomp-proceedings.com/proc/p2015/ICA7022.pdf">PDF</a></p>
+			<p>Toldova S., Azerkovich I., Гришина Ю., Ладыгина А., Lyashevskaya O., Ройтберг А. М., Сим Г., Васильева М. Pre-experiments on Annotation of Russian Coreference Corpus // Working papers by NRU HSE. Series WP BRP "Linguistics", Vol. 35, 2015. <a href="http://www.hse.ru/data/2015/12/29/1136297632/35LNG2015_ed.pdf">PDF</a></p>
+		</article>
+		<article>
+			<h4><time datetime="2014" pubdate>2014</time></h4>
+			<p>Toldova S.Ju., Roytberg A., Nedoluzhko А., Kurzukov M., Ladygina A., Vasilyeva M., Azerkovich I., Grishina Y., Sim G., Ivanova A., Gorshkov D. Evaluating Anaphora and Coreference Resolution for Russian // Компьютерная лингвистика и интеллектуальные технологии: По материалам ежегодной Международной конференции «Диалог» (Бекасово, 4 — 8 июня 2014 г.). Вып. 13(20). М. : Изд-во РГГУ, 2014. P. 681-695. <a href="http://www.dialog-21.ru/digests/dialog2014/materials/pdf/ToldovaSJu.pdf">PDF</a></p>
+		</article>
+		<article>
+			<h4><time datetime="2013" pubdate>2013</time></h4>
+			<p>Brykina M., Toldova S., Faynveyts A. V. Dictionary-based ambiguity resolution in Russian named-entities recognition. A case study, in: Компьютерная лингвистика и интеллектуальные технологии: По материалам ежегодной Международной конференции «Диалог» (Бекасово, 29 мая - 2 июня 2013 г.). В 2-х т. Т. 1: Основная программа конференции. Вып. 12 (19). М. : РГГУ, 2013. P. 163-177. <a href="http://www.dialog-21.ru/digests/dialog2013/materials/pdf/BrykinaMM.pdf">PDF</a></p>
+			<p>Toldova S., Bonch-Osmolovskaya A. A., Lyashevskaya O. Learning Computational Linguistics through NLP Evaluation Events: the experience of Russian evaluation initiative, in: 51st Annual Meeting of the Association for Computational Linguistics. Proceedings of the Fourth Workshop on Teaching Natural Language Processing. Stroudsburg, PA : Association for Computational Linguistics, 2013. P. 61-65. <a href="http://www.aclweb.org/anthology/W13-3410">PDF</a></p>
+			<p>Толдова С. Ю., Брыкина М. М., Файнвейц А. В. Проблема идентификации именованных сущностей при их автоматическом извлечении // Актуальные инновационные исследования: наука и практика. 2013. № 1</p>
+			<p>Акинина Ю. С., Кузнецов И. О., Толдова С. Ю. Сравнения двух методов автоматического извлечения участников события из неструктурированных источников // Научно-техническая информация. Серия 2: Информационные процессы и системы. 2013. № 6. С. 26-34.</p>
+		</article>
+		<article>
+			<h4><time datetime="2012" pubdate>2012</time></h4>
+			<p>Gareyshina A., Ionov M., Lyashevskaya O., Privoznov D., Sokolova E., Toldova S. RU-EVAL-2012: Evaluating dependency parsers for Russian // Proceedings of COLING 2012: Posters. Mumbai: The COLING 2012 Organizing Committee, 2012. P. 349-360. <a href="http://www.aclweb.org/anthology/C12-2035">PDF</a></p>
+			<p>Толдова С. Ю., Соколова Е. Г., Астафьева И., Гарейшина А., Королева А. Н., Привознов Д., Сидорова Е., Тупикина Л., Ляшевская О. Н. Оценка методов автоматического анализа текста 2011–2012: синтаксические парсеры русского языка // Компьютерная лингвистика и интеллектуальные технологии: По материалам ежегодной Международной конференции «Диалог» (Бекасово, 30 мая–3 июня 2012 г.). В 2 томах. Т. 2: Доклады специальных секций. Вып. 11 (18). М.: РГГУ, 2012. С. 77-90. <a href="http://www.dialog-21.ru/digest/2012/pdf2/">PDF</a></p>
+		</article>
+		<article>
+			<h4><time datetime="2010" pubdate>2010</time></h4>
+			<p>Ляшевская О. Н., Астафьева И., Бонч-Осмоловская А. А., Гарейшина А., Гришина Ю., Дьячков В., Ионов М., Королева А. Н., Кудринский М., Литягина А., Лучина Е., Сидорова Е., Толдова С. Ю., Савчук С. О., Коваль С. А. Оценка методов автоматического анализа текста: морфологические парсеры русского языка // Компьютерная лингвистика и интеллектуальные технологии. По материалам ежегодной Международной конференции "Диалог 2010". Вып. 9 (16). М.: РГГУ, 2010. С. 318-326. <a href="http://www.dialog-21.ru/digests/dialog2010/materials/pdf/49.pdf">PDF</a></p>
+		</article>
+      </section>
+
+	  </div>
+	  <div id="footer">
+	  	<div style="float: right;">
+	  	    2015-2017 @ RU-EVAL team <br />
+            <span title="Лицензия CC BY-SA 4.0"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class="image"><img alt="" src="img/cc-by-sa.png" width="44" height="16" /></a></span>
+		</div>
+	        Портал создан при поддержке РФФИ, проект No 15-07-09306 "Стандарты оценки методов автоматического извлечения информации из текстов"
+	  </div>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+
+</html>

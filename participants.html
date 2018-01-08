@@ -1,0 +1,297 @@
+{% extends "morpho/base.html" %}
+
+{% set subtitle = "Участники" %}
+
+{% block main %}
+
+	<section>
+		<h1>Участники форума RU-EVAL 2010</h1>
+		<article>
+			<ul>
+				<li><a href="#AOT">АОТ</a></li>
+				<li><a href="#ARME">ARME</a></li>
+				<li><a href="#Cirmorph">Cir_morph</a></li>
+				<li><a href="#Crosslator">Crosslator</a></li>
+				<li><a href="#FSTMorph">FSTMorph</a></li>
+				<li><a href="#FSTMorphETAP3">FSTMorph + ETAP-3</a></li>
+				<li><a href="#Libmorphrus">Libmorphrus</a></li>
+				<li><a href="#Mocky">Mocky</a></li>
+				<li><a href="#Mystem">Mystem</a></li>
+				<li><a href="#Mystem+FastDictionary">Mystem + FastDictionary</a></li>
+				<li><a href="#Mystem+LightDisamb">Mystem + LightDisamb</a></li>
+				<li><a href="#Polymorph">Polymorph / Полиморф</a></li>
+				<li><a href="#Pymorphy">Pymorphy</a></li>
+				<li><a href="#RCO">RCO Morphology</a></li>
+				<li><a href="#RDMAIPII">RDMA_IAI / РДМА_ИПИИ</a></li>
+				<li><a href="#SemantarusMorpho">Semantarus Morpho / Семантарус Морфо</a></li>
+				<li><a href="#Starling">Starling</a></li>
+				<li><a href="#TextAn">TextAn / ТекстАн</a></li>
+			</ul>
+		</article>
+		<article>
+		<h3>Подробнее об участниках</h3>
+			<ul>
+				<li><a name="AOT"></a><strong><a href="http://aot.ru/">АОТ</a></strong>
+				</li><br />
+				<li><a name="ARME"></a><strong>ARME</strong><br />
+					ABBYY Retrieval and Morphology Engine
+				</li><br />
+				<li><a name="Cirmorph"></a><strong>Cir_morph</strong><br />
+				Модуль морфологического анализа АНО ЦИИ. Морфологический анализ русского и английского языков. Анализ русского языка - по урезанному, а потом дополненному словарю
+Зализняка. Словарь насчитывает 130 тыс.лемм. Для неизвестных лемм порождаются гипотезы. Главный критерий порождения - наличие правильного варианта среди гипотез.<br />
+Также имеется некоторое количество эвристик - невозможные парадигмы, приставки, суффиксы, пользовательский словарь и т.п.<br />
+Существует весьма удобная оболочка пополнения словаря - по аналогии с ранее описанными словами, позволяет при необходимости очень быстро увеличивать словарь.
+				</li><br />
+				<li><a name="Crosslator"></a><strong>Crosslator / Кросслятор</strong><br />
+				"Кросслятор" является многоязыковой системой морфологического анализа и синтеза текстов на таких языках, как русский, английский, турецкий и испанский. Разрабатывается в ИПМ им. М.В. Келдыша с 2001 года в рамках работ над системой машинного перевода "Кросслятор".
+				</li><br />
+				<li><a name="FSTMorph"></a><strong>FSTMorph / ФСТМорф</strong><br />
+				Морфологический парсер FSTMorph, разработанный в лаборатории компьютерной лингвистики ИППИ РАН, состоит из двух частей: 1) модуля получения возможных разборов на основе конечного автомата и 2) модуля частичного разрешения грамматической омонимии по линейному контексту на основе правил.<br />
+				Кроме того, в дополнение к этому парсеру имеются простые алгоритмы для следующих задач:<br /> 
+				1) разбиение текста на предложения и слова, <br />
+				2) определение типа капитализации слов (регулярная капитализация типа <i>Москва</i>, <i>Юля</i>, окказиональная полная или частичная капитализация типа <i>Человек</i> с большой буквы или <i>ЛЮБЛЮ</i>, <i>ЦЕЛУЮ</i>, окказиональное отсутствие требуемой правилами капитализации типа <i>москва</i>, <i>юля</i><br />
+				3) обработка цифровых выражений. <br />
+				Объем русского морфологического словаря - более 120 тыс. лексических единиц.
+				</li><br />
+				<li><a name="FSTMorphETAP3"></a><strong>FSTMorph + ETAP-3 / ФСТМорф + ЭТАП-3</strong><br />
+				FSTMorph + Синтаксический анализатор (СА), который является частью лингвистического процессора ЭТАП-3 – полифункциональной системы обработки текста на ЕЯ. Для каждого предложения СА строит синтаксическую структуру в виде дерева зависимостей. В процессе построения структуры специальные правила (синтагмы) проводят все допустимые с их точки зрения бинарные синтаксические отношения между словами (точнее говоря - между морфологическими представлениями слов, т.е. лемма + набор словоизменительных грамматических характеристик). Затем из полученного набора отношений выделяется дерево зависимостей. В процессе генерации дерева зависимостей происходит полная дизамбигуация неоднозначных морфологических разборов.<br />
+				Объем используемого СА русского комбинаторного словаря (в котором представлена синтаксически чувствительная информация для каждого слова, включая синтаксические признаки и модели управления), - около 100 тыс. лексических единиц.
+				</li><br />
+				<li><a name="Libmorphrus"></a><strong><a href="http://www.keva.ru">Libmorphrus</a></strong><br />
+				Морфологический анализатор реализован в виде динамической библиотеки с экспортируемыми функциями в стиле "C". Есть также PHP-версия. Размер библиотеки со словарем - немногим более двух Mb. Высокая производительность анализатора - около ста тысяч слов в секунду в режиме полной лемматизации - обеспечивается оригинальной структурой словаря.
+				</li><br />
+				<li><a name="Mocky"></a><strong><a href="http://corpus.leeds.ac.uk/mocky/">Mocky</a></strong><br />
+				Анализатор построен на статистической модели триграмм (одна модель использует TnT, другая TreeTagger). Принципы работы и оценка качества описаны <a href="http://corpus.leeds.ac.uk/mocky/lrec2008-msd.pdf">здесь</a>.
+				</li><br />
+				<li><a name="Mystem"></a><strong><a href="http://company.yandex.ru/technology/mystem">Mystem</a></strong><br />
+				Программа Mystem производит морфологический анализ текста на русском языке. Для слов, отсутствующих в словаре, порождаются гипотезы на основании частотности суффиксов.
+				</li><br />
+				<li><a name="Mystem+FastDictionary"></a><strong>Mystem + FastDictionary</strong><br />
+				Mystem + новый модуль для работы со словами, отсутствующими в словаре.
+				</li><br />
+				<li><a name="Mystem+LightDisamb"></a><strong>Mystem + LightDisamb</strong><br />
+				Mystem + "легкая" статистическая процедура снятия омонимии на основе биграммной статистики, с обучением по неразмеченному корпусу.
+				</li><br />
+				<li><a name="Polymorph"></a><strong><a href="http://feb-web.ru/febupd/parser/parse.htm">Polymorph / Полиморф</a></strong><br />
+				Парсер содержит грамматический словарь на 110 тыс. слов, в основном соответствующий словарю А.А. Зализняка. Для отсутствующих в словаре слов парсер строит вполне разумные гипотезы, построенные на основе анализа большого массива текстов.
+Парсер может обрабатывать тексты в старой орфографии и правильно анализирует устаревшие формы типа <i>новаго</i>, <i>новыя</i>, <i>нову</i>, <i>пришед</i>, <i>скоряе</i> и т.д.
+				</li><br />
+				<li><a name="Pymorphy"></a><strong><a href="http://bitbucket.org/kmike/pymorphy/">Pymorphy</a></strong><br />
+				Некоммерческий open-source проект, который базируется на исследованиях aot.ru. Алгоритмы, используемые для морфологического анализа, - по сути, те же, что и на aot.ru, но их реализация упрощена. Это позволило добиться короткого, понятного и расширяемого кода (удобного для исследований и быстрой доработки) ценой потерь в производительности.
+				</li><br />
+				<li><a name="RCO"></a><strong><a href="http://www.rco.ru/product.asp?ob_no=2871&part=docs">RCO Morphology</a></strong><br />
+				Коммерческий морфоанализатор, работающий в составе лингвистических анализаторов RCO. Библиотека RCO Morphology SDK предназначена для морфологического анализа слов русского языка в информационно-поисковых системах и позволяет решать следующие задачи:<br />
+получать нормальную форму слова, заданного в любой грамматической форме;<br />
+получать все грамматические формы слова, заданного в любой грамматической форме.<br />
+Библиотека включает в себя: <br />
+точный анализ известных слов по словарю объемом более 115 тысяч слов, что покрывает более 3-х миллионов словоформ; <br />
+высоко достоверный анализ неизвестного слова на основе комплекса правил словообразования и словоизменения; <br />
+вероятностный анализ посредством соотнесения с моделями словоизменения часто встречающихся слов на основе оценки флективной и суффиксальной частей слова.<br />
+Объем бинарного словаря - 3 МБайта. <br />
+Скорость морфологического анализа – более 100 тысяч слов в секунду (Процессор AMD Athlon, 1000 МГц). <br />
+Продукт поставляется в виде динамической библиотеки (dll) для Windows.
+				</li><br />
+				<li><a name="RDMAIPII"></a><strong>RDMA_IAI / РДМА_ИПИИ</strong><br />
+				Модуль декларативного морфологического анализа ИПИИ (Украина, Донецк) в явном виде хранит парадигмы слов (около 3 млн. словоформ, из которых 1.9 млн. уникальных строк). Каждая словоформа снабжена морфологической информацией. Модуль использует метод скоростного поиска строковых величин в словарях сверхбольших объёмов. Представляет собой совокупность средств морфологического анализа и синтеза. Оснащён подсистемой бессловарного морфологического анализа.
+				</li><br />
+				<li><a name="SemantarusMorpho"></a><strong>Semantarus Morpho / Семантарус Морфо</strong><br />
+				Алгоритм морфоанализа О.С.Кулагиной, работающий на словнике словаря А.А.Зализняка с добавлением вероятностного определения грамм характеристик. Морфоанализатор является частью системы синтаксического анализа естестввенноязыковых текстов.
+				</li><br />
+				<li><a name="Starling"></a><strong><a href="http://starling.rinet.ru/morpho.php">Starling</a></strong><br />
+				Модуль морфологического анализа системы Starling. Парсер работает со словарем Зализняка в его "книжном" представлении, т.е. программа понимает описания вокабул непосредственно в том виде, который принят в словаре. Правила анализа скрыты в коде анализатора -- метаязыка для описания правил не предусмотрено. Для любой формы любого слова из словаря программа способна определить: <br />
+ a) исходную слоформу; <br />
+ b) словарную информацию, то есть морфологический индекс и имеющиеся комментарии из словаря; <br />
+ c) морфологическую характеристику слова. В случае многозначности введенной формы рассматриваются все варианты анализа; <br />
+ d) место ударения. <br />
+Кроме того, программа способна синтезировать акцентуированные парадигмы для каждого из результатов анализа. <br />
+Существует две версии программы. Одна написана на языке Clipper (xBase,xHarbour), другая на языке C.
+				</li><br />
+				<li><a name="TextAn"></a><strong>TextAn / ТекстАн</strong><br />
+Морфологический анализатор использует базы данных на 145 тыс. слов, построенные по словарю В.А.Тузова. Результат морфологического разбора каждого слова подается на модуль снятия неоднозначностей, в качестве которого используется система элементов типа “Очередь”, позволяющая хранить результаты анализа восьми слов (каждое слово может иметь до шести вариантов разбора). Функционирование модуля подчиняется определенным правилам, которые оформлены в виде процедур. При поступлении результата разбора очередного слова в системе осуществляется сдвиг информации справа на¬лево. При этом результат разбора записывается в последний элемент, а информация из первого элемента выводится из системы в качестве окончательного результата в виде леммы и морфологической информации.
+				</li>
+			</ul>
+		</article>
+
+		<article>
+			<h3>Таблица участия</h3>
+			<p>Были получены заявки от 15 групп разработчиков, некоторые разработчики представляют несколько вариантов программ. Таблица заявок по дорожкам:</p>
+		</article>
+
+		<article>
+<table class="participantsTable">
+<tr><td>&nbsp;&nbsp;</td>
+<th><span class="menuIt">&nbsp;<a href="track_lemma.html">ЛЕММАТИЗАЦИЯ</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;&nbsp;<a href="track_pos.html">POS</a>&nbsp;&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_gram.html">МОРФОЛОГИЯ</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_rare.html">РЕДКИЕ СЛОВА</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_scan.html">КОЛЛЕКЦИИ: "ГРЯЗНЫЕ" ТЕКСТЫ</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_lemma_disamb.html">ДИЗАМБИГУАЦИЯ: ЛЕММЫ</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_pos_disamb.html">ДИЗАМБИГУАЦИЯ: POS</a>&nbsp;</span></th>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#AOT">АОТ</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#ARME">ARME</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Cirmorph">Cir_morph</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Crosslator">Crosslator</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#FSTMorph">FSTMorph</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#FSTMorphETAP3">FSTMorph + ETAP-3</a>&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Libmorphrus">Libmorphrus</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Mocky">Mocky</a>&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Mystem">Mystem</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Mystem+FastDictionary">Mystem + FastDictionary</a>&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Mystem+LightDisamb">Mystem + LightDisamb</a>&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Polymorph">Polymorph</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Pymorphy">Pymorphy</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#RCO">RCO Morphology</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#RDMAIAI">RDMA_IAI</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#SemantarusMorpho">Semantarus Morpho</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Starling">Starling</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#TextAn">TextAn</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr>
+</table>
+		</article>
+	</section>
+
+{% endblock %}

@@ -1,0 +1,629 @@
+
+<!doctype html>
+<html lang="ru">
+  <head>
+	<meta http-equiv="Content-Language" content="Russian" />
+	<meta http-equiv="Content-Type" content="text/html; charset=cp1251" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Morphology. RU-EVAL: Evaluation of Russian NLP tools</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+      <header>
+        <h1><a href="index.html">ru-eval: оценка методов автоматического анализа текстов</a></h1>
+        <p></p>
+
+        <ul>
+          <li style="width: 70px;" ><a href="about.html"><strong>Задачи</strong></a></li>
+          <li style="width: 98px;" ><a href="morpho.html"><strong>Морфология</strong></a></li>
+          <li style="width: 85px;" ><a href="syntax.html"><strong>Синтаксис</strong></a></li>
+          <li style="width: 50px;" ><a href="ner.html"><strong>NER</strong></a></li>
+          <li style="width: 75px;" ><a href="anaphora.html"><strong>Анафора</strong></a></li>
+          <li style="width: 95px;" ><a href="sentiment.html"><strong>Тональность</strong></a></li>
+          <li style="width: 115px;" ><a href="plageval.html"><strong>Заимствования</strong></a></li>
+          <li style="width: 60px;" ><a href="other.html"><strong>Другое</strong></a></li>
+          <li style="width: 92px;" ><a href="resources.html"><strong>Материалы</strong></a></li>
+        </ul>
+
+      </header>
+	<div id="submenu"><a href="#about">Общая информация</a> -- <a href="#tracks">Дорожки</a> -- <a href="#train">Коллекции</a> -- <a href="#todo">Задачи</a> -- <a href="#scores">Метрики</a> -- <a href="#participants">Участники</a> -- <a href="#results">Результаты</a></div>
+	<section>
+		<p>Предыдущий форум по лексико-грамматической разметке русских текстов проводился в <time datetime="2010">2010 г.</time></p>
+		<h3>Оценка методов автоматического анализа текста: морфологический анализ русского языка</h3>
+		<a name="about"></a>
+		<article>
+			<p>Оценка результатов проводится по нескольким независимым дисциплинам (дорожкам). Каждая дорожка посвящена одной конкретной задаче анализа текста со строго определенными правилами оценки систем-участников. От участников не требуется участие во всех дорожках сразу, поэтому у них есть возможность сосредоточиться на решении только одной из предлагаемых задач.</p>
+			<p>Задачи и правила проведения дорожек определяются совместно с участниками. Следить за обсуждением дорожек и правил их проведения и участвовать в обсуждении вы можете <span class="selected"><a href="#">на форуме</a></span> и подписавшись на список рассылки. <span class="selected">Проект общего <a href="http://docs.google.com/Doc?docid=0Aa-5pzCmb8MOZDR0N3Y4Ml8yOGczN3c3bWRi&hl=en">регламента</a> для проведения дорожек направлен участникам и экспертам для обсуждения и правки.</span> Предшествующую дискуссию можно увидеть <a href="questions.html">здесь</a>  и <a href="blitz2.html">здесь</a>.</p>
+			<!-- Адрес форума rueval.0pk.ru -->
+		</article>
+		<article>
+			<a name="tracks"></a>
+			<h4>Cостав дорожек 2010 года:</h4>
+			<ul> 
+				<li><strong><a href="track_lemma.html">ЛЕММАТИЗАЦИЯ</a></strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="selected"></span><br />определение правильной леммы&nbsp;
+				</li><br />
+				<li><strong><a href="track_pos.html">POS</a></strong>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="selected"></span><br />правильное определение части речи&nbsp;
+				</li><br />
+				<li><strong><a href="track_gram.html">МОРФОЛОГИЯ</a></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="selected"></span><br />правильное извлечение прочей грамматической информации (падеж, род и т.д.)&nbsp;
+				</li><br />
+				<li><strong><a href="track_rare.html">РЕДКИЕ СЛОВА</a></strong>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="selected"></span><br />правильная лемматизация и частеречная характеристика так называемых "несловарных слов"&nbsp;
+				</li><br />
+				<li><strong><a href="track_scan.html">КОЛЛЕКЦИИ: "ГРЯЗНЫЕ" ТЕКСТЫ</a></strong> 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="red">[CANCELLED]</span><span class="selected"></span>
+<br />качество разметки текстов особого вида, например, автоматически распознанных сканов и т.п.&nbsp;
+				</li><br />
+				<li><strong><a href="track_lemma_disamb.html">ДИЗАМБИГУАЦИЯ: ЛЕММЫ</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="selected"></span>
+				<br />выдача единственно правильной леммы&nbsp;
+				</li><br/>
+				<li><strong><a href="track_pos_disamb.html">ДИЗАМБИГУАЦИЯ: POS</a></strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="selected"></span>
+				<br />выдача единственно правильной части речи
+				</li>
+			</ul>
+		</article>
+	</section>
+
+	<section>
+		<a name="train"></a>
+		<h3>Тестовые коллекции</h3>
+		<article>
+			<h4>Коллекции исходных данных:</h4>
+			<ul>
+				<li>Основная коллекция. <a href="rueval_2010_goldstandard_text.txt">Исходный неразмеченный текст</a></li>
+				<li>Грязные тексты.</li>
+				<li>Редкие слова. <a href="rueval_2010_rare75_text.txt">Неразмеченный текст для дорожки "Редкие слова"</a> (слова в контексте предложения).</li>
+			</ul>
+		</article>
+		<article>
+			<h4>Золотой стандарт:</h4>
+			<ul>
+				<li><a href="rueval_2010_goldstandard_tagged.txt">Размеченный стандарт</a> (исправленная версия, май 2010)</li>
+				<li><a href="rueval_2010_rare75_tagged.txt">Размеченный стандарт для дорожки "Редкие слова"</a></li>
+			</ul>
+		</article>
+	</section>
+	<section>
+		<article>
+			<p>Коллекции исходных данных составлены из фрагментов коллекций неразмеченных текстов, присланных следующими участниками и экспертами:</p>
+			<ul>
+				<li>ARME (Компания ABBYY)</li>
+				<li>Crosslator (Институт прикладной математики им. М.В.Келдыша)</li>
+				<li>FSTMorph (Институт проблем передачи информации РАН)</li>
+				<li>Pymorphy (М. Коробов)</li>
+				<li>TextAn (Е. Каневский, К. Боярский)</li>
+				<li>М. Ионов</li>
+				<li>С. Коваль</li>
+				<li>М. Кудринский</li>
+				<li>О. Ляшевская</li>
+				<li>Национальный корпус русского языка (ИРЯ РАН)</li>
+				<li>Е. Сидорова</li>
+			</ul>
+			<p>Благодарим всех, принявших участие в составлении тестовых коллекций.</p>
+		</article>
+		<article>
+			<p>Баланс жанров в Основной коллекции:</p>
+			<p>&nbsp;&nbsp;18% Статьи в СМИ/Нон-фикшн<br />
+				&nbsp;&nbsp;15% Новости<br />
+				&nbsp;&nbsp;15% Интервью<br />
+				&nbsp;&nbsp;15% Технические тексты<br />
+				&nbsp;&nbsp;15% Юридические тексты<br />
+				&nbsp;&nbsp;18% Художественная литература<br />
+				&nbsp;&nbsp;&nbsp;4% Блоги и форумы<br /></p>
+			<p>Коллекция заданий составлена экспертами.</p>
+		</article>
+	</section>
+	<section>
+		<a name="todo"></a>
+		<h3>Задачи</h3>
+		<article>
+			<p>Участники получают на вход неразмеченный текст, токенизируют его по оговоренным правилам и приписывают лексико-грамматический разбор в соответствии с условием каждой дорожки.</p>
+			<p>Участники шифруют авторство своих данных с помощью "внутреннего" пароля, присланного организаторами. При подведении результатов ответы систем будут представлены с помощью отдельного "внешнего" пароля для каждой дорожки (этим обеспечивается соблюдение полной анонимности).</p>
+ 		</article>
+		<article>
+		<h4>Входные данные</h4>
+		<p>Участники получают один файл с Основной коллекцией и один файл с коллекцией Грязные тексты. </p>
+		<p>Файлы представляют собой plain text и имеют кодировку UTF-8, без подписи BOM, концы строк имеют вид \r\n.</p>
+ 		</article>
+		<article>
+		<h4>Выходные данные</h4>
+		<p>Результаты (ответы систем) участники размещают на FTP-сервере, адрес которого указан в письме организаторов. Логин и пароль высылается участникам вместе с заданиями.</p>
+		<p>Ответы систем высылаются также в виде одного файла для каждой категории дорожек (см. п. II /1, 2,3 выше), 
+а именно:<br />
+один файл с ответами для дорожек ЛЕММАТИЗАЦИЯ, POS, МОРФОЛОГИЯ, РЕДКИЕ СЛОВА,<br />
+	    под названием output1_<пароль>.txt, например output1_green<br />
+один файл в ответами для дорожек ДИЗАМБИГУАЦИЯ:ЛЕММЫ, ДИЗАМБИГУАЦИЯ:POS<br />
+	    под названием output2_<пароль>.txt, например output2_green<br />
+один файл с ответами для дорожки КОЛЛЕКЦИИ: "ГРЯЗНЫЕ" ТЕКСТЫ.<br />
+	    под названием output3_<пароль>.txt, например output3_green</p>
+
+		<p>Файлы имеют кодировку UTF-8 (без подписи BOM, концы строк имеют вид \r\n) и также представляет собой plain text. 
+Вместе с каждым файлом Ответа системы участник размещает на сервере второй файл под названием вида output1_green_tracks.txt, 
+в котором указывает список дорожек, в которых участвует файл, из следующего списка:<br />
+track_2010_lemma<br />
+track_2010_pos<br />
+track_2010_gram<br />
+track_2010_rare<br />
+track_2010_scan<br />
+track_2010_lemma_disamb<br />
+track_2010_pos_disamb<br />
+Названия дорожек разделяются концом строки.<br />
+В конце списка еще раз пишется внутренний пароль.</p>
+ 		</article>
+
+		<article>
+		<h4>Формат ответов</h4>
+		<p>Ответы для дорожек даются сплошным массивом, файл не должен содержать никаких других 
+элементов, кроме текста и разметки. Ответы предоставляются в следующем формате:<br />
+		Каждая словоформа дается с новой строки, после нее ставится знак конца строки.<br />
+		Каждый разбор дается с новой строки.<br />
+		Знаки пунктуации и другие элементы, не подлежащие разбору, даются с новой строки.<br />
+		Морфологическая информация в разборе дается в следующей последовательности: лемма, часть речи, значения грамматических категорий (граммемы). Перед леммой, частью речи и первой граммемой ставится знак табуляции. Далее все граммемы разделяются запятой. После последней граммемы идет конец строки. Например:<br />
+пила<br />
+_ _пить_ _V_ _f,past,sg<br />
+_ _пила_ _S_ _f,sg,nom<br />
+,<br />
+ела<br />
+_ _есть_ _V_ _f,past,sg<br />
+
+Несловарные элементы (знаки препинания, слова, записанные латинскими буквами, другая 
+псевдографика, html-теги) в оценке не участвуют - эти строки имеют формат<br />
+несловарное_слово-конец_строки
+см. разметку запятой в примере выше.</p>
+ 		</article>
+
+		<article>
+		<h4>Соглашение об обозначении частей речи и признаков грамматических категорий</h4>
+		<p>Части речи</p>
+
+		<p>Для разметки используется упрощенная система частей речи:<br />
+S — существительное (яблоня, лошадь, корпус, вечность)<br />
+A — прилагательное (коричневый, таинственный, морской)<br />
+V — глагол (пользоваться, обрабатывать)<br />
+PR — предлог (под, напротив)<br />
+CONJ — союз (и, чтобы)<br />
+ADV — прочие неизменяемые слова (частицы, междометия, вводные слова)<br />
+
+Имена собственные размечаются как имена существительные (S)<br />
+<br />
+Не участвуют в оценке и могут быть размечены любым образом:<br />
+Местоимения (включая наречные и предикативные)<br />
+Числительные, в том числе записанные цифрами<br />
+Составные предлоги и союзы (потому что, в течение)<br /> 
+Инициалы</p>
+
+		<p>Морфология (грамматические_признаки)</p>
+
+		<p>В категориях ADV,PR,CONJ поле остается пустым.<br /> 
+Морфология указывается только для S,A,V <br /> 
+Здесь также используется сокращенный набор признаков:<br /> 
+род - m, f, n<br /> 
+падеж - nom, gen, dat, acc, ins, loc<br /> 
+число - sg, pl <br /> 
+время/наклонение/причастие/деепричастие - pres, past, imper, inf, partcp, ger<br /> 
+залог - act, pass (указывается только в формах причастий)<br /> 
+лицо - 1p, 2p, 3p<br /> 
+<br /> 
+Не участвуют в оценке следующие грамматические категории: <br /> 
+переходность глагола<br /> 
+вид глагола<br /> 
+одушевленность имен<br /> 
+краткая/полная/сравнительная/превосходная форма прилагательного и наречия<br /> 
+возвратность глагола<br /> 
+залог: указывается только в формах причастий</p> 
+
+		<p>Отдельные особенности (признаки, не участвующие в оценке, могут быть размечены любым образом):<br />
+
+формы типа "пишу" и формы типа "напишу" объединяются в форму непрош. времени (pres), <br />
+формы типа "пойдемте" - в оценке не участвуют<br />
+формы имен из серии "пойти в солдаты", "попить чаю" - в оценке не участвуют<br />
+"в году" (второй предложный, местный) - loc<br />
+счетная форма (два шар/а) - gen<br />
+звательный падеж (Маш! отче и др.) - в оценке не участвует<br />
+сравнительные степени на ПО- (попроще) - в оценке не участвуют<br />
+род слов общего рода (врач) - в оценке не участвует<br />
+
+Буквы Е и Ё в лемматизации считаются равноправными. <br />
+Капитализация (разница между прописными и строчными буквами) не учитывается. </p>
+ 		</article>
+
+		<article>
+		<h4>Общая процедура проведения экспертизы</h4>
+		<p>Экспертиза строится на выборочной проверке ответов, присланных участниками. Основанием проведения 
+экспертизы является "Золотой стандарт". "Золотым стандартом" называются случайно выбранные предложения 
+из Основной коллекции (объемом около 2000 словоупотреблений). Кроме того, в "Золотой стандарт" входят 
+предложения с редкими словами, заранее подобранные экспертами и включенные в Основную коллекцию.
+На дорожках ЛЕММАТИЗАЦИЯ, POS, МОРФОЛОГИЯ, ДИЗАМБИГУАЦИЯ:ЛЕММЫ, ДИЗАМБИГУАЦИЯ:POS проверке 
+подвергаются целые предложения. На дорожках РЕДКИЕ СЛОВА и КОЛЛЕКЦИИ: "ГРЯЗНЫЕ" ТЕКСТЫ 
+проверке подвергаются отдельные слова в контексте предложений. </p>
+
+<p>На дорожках без дизамбигуации правильным ответом системы считается ответ, в котором хотя бы один из 
+разборов совпадает с разбором Золотого стандарта или признан правильным экспертом в процессе оценки. 
+Не требуется наличие всех допустимых для словоформы разборов. Наличие лишних разборов не штрафуется.
+На дорожках с дизамбигуацией правильным ответом системы считается единственный или идущий первым ответ, 
+если он совпадает с разбором Золотого стандарта или признан правильным экспертом в процессе оценки.</p>
+
+<p>При оценке на каждой из дорожек оцениваются только данные полей, релевантных для дорожки.
+Отсутствие других полей (например, значений грамматических категорий) на результаты не влияет.</p>
+
+<p>Экспертиза проводится в четыре этапа.</p>
+
+<p>1 этап - ручная разметка Золотого стандарта силами экспертов. 
+Ручная разметка проводится параллельно с проведением дорожек. Золотой стандарт делится на 
+фрагменты, каждый фрагмент размечается независимо двумя экспертами. Случаи, в которых 
+аннотаторы расходятся, а также затрудняются с ответом, обсуждаются коллективно. Если аннотаторы 
+не могут прийти к удовлетворительному однозначному решению относительно каких-либо случаев, то они  
+исключаются из Золотого стандарта.</p>
+
+<p>2 этап - автоматическое составление списка расхождений между ответом системы и Золотым 
+стандартом.</p>
+
+<p>3 этап - оценка экспертами расхождений по шкале:<br />
+права система / прав стандарт / грамматически спорный вопрос / не знаю.<br />
+В категорию "права система", в частности, попадают случаи, когда расхождения между ответом системы и 
+Стандартом носят технический характер (различия в кодировках, формате и т.п.).
+К категории "грамматически спорный вопрос" относятся, в частности, расхождения, связанные 
+с членением текста на словоформы (составные предлоги, союзы и проч.), случаи, в которых мы 
+не вправе требовать чудес интеллекта от морфологической системы (например, решение вопроса 
+о возвратности, и, соответственно, о лемме глагола в контексте "корабли показывались на горизонте") и др.</p>
+
+<p>Каждый ответ системы на каждой дорожке оценивается одним экспертом. Для обеспечения 
+согласованности оценок, выставляемых разными экспертами, команда экспертов составляет 
+типологию расхождений между системами и стандартом (например, что считать "грамматически 
+спорным вопросом") и вырабатывает общие решения.</p>
+
+<p>4 этап - количественная оценка расхождений и составление рейтингов.</p>
+
+<p>Оценкам расхождений присваиваются веса 1 (прав стандарт) и 0 (во всех остальных случаях). Случаи 
+совпадения решений Системы и Стандарта также получают вес 0.</p>
+		</article>
+	</section>
+
+	<section>
+		<a name="scores"></a>
+		<h3>Метрики</h3>
+		<p>Метрикой общей оценки при составлении рейтингов является аккуратность (accuracy): количество слов, разобранных правильно / общее количество слов, участвующих в оценке</p>
+		<p>В рейтинги также включается некоторая дескриптивная статистика об Ответе системы (среднее число разборов на дорожках без дизамбигуации; число случаев, исключенных из оценки).</p>
+	</section>
+
+	<section>
+		<a name="participants"></a>
+		<h3>Участники RU-EVAL 2010</h3>
+		<article>
+			<ul>
+				<li><a href="#AOT">АОТ</a></li>
+				<li><a href="#ARME">ARME</a></li>
+				<li><a href="#Cirmorph">Cir_morph</a></li>
+				<li><a href="#Crosslator">Crosslator</a></li>
+				<li><a href="#FSTMorph">FSTMorph</a></li>
+				<li><a href="#FSTMorphETAP3">FSTMorph + ETAP-3</a></li>
+				<li><a href="#Libmorphrus">Libmorphrus</a></li>
+				<li><a href="#Mocky">Mocky</a></li>
+				<li><a href="#Mystem">Mystem</a></li>
+				<li><a href="#Mystem+FastDictionary">Mystem + FastDictionary</a></li>
+				<li><a href="#Mystem+LightDisamb">Mystem + LightDisamb</a></li>
+				<li><a href="#Polymorph">Polymorph / Полиморф</a></li>
+				<li><a href="#Pymorphy">Pymorphy</a></li>
+				<li><a href="#RCO">RCO Morphology</a></li>
+				<li><a href="#RDMAIPII">RDMA_IAI / РДМА_ИПИИ</a></li>
+				<li><a href="#SemantarusMorpho">Semantarus Morpho / Семантарус Морфо</a></li>
+				<li><a href="#Starling">Starling</a></li>
+				<li><a href="#TextAn">TextAn / ТекстАн</a></li>
+			</ul>
+		</article>
+		<article>
+		<h4>Подробнее об участниках</h4>
+			<ul>
+				<li><a name="AOT"></a><strong><a href="http://aot.ru/">АОТ</a></strong>
+				</li><br />
+				<li><a name="ARME"></a><strong>ARME</strong><br />
+					ABBYY Retrieval and Morphology Engine
+				</li><br />
+				<li><a name="Cirmorph"></a><strong>Cir_morph</strong><br />
+				Модуль морфологического анализа АНО ЦИИ. Морфологический анализ русского и английского языков. Анализ русского языка - по урезанному, а потом дополненному словарю
+Зализняка. Словарь насчитывает 130 тыс.лемм. Для неизвестных лемм порождаются гипотезы. Главный критерий порождения - наличие правильного варианта среди гипотез.<br />
+Также имеется некоторое количество эвристик - невозможные парадигмы, приставки, суффиксы, пользовательский словарь и т.п.<br />
+Существует весьма удобная оболочка пополнения словаря - по аналогии с ранее описанными словами, позволяет при необходимости очень быстро увеличивать словарь.
+				</li><br />
+				<li><a name="Crosslator"></a><strong>Crosslator / Кросслятор</strong><br />
+				"Кросслятор" является многоязыковой системой морфологического анализа и синтеза текстов на таких языках, как русский, английский, турецкий и испанский. Разрабатывается в ИПМ им. М.В. Келдыша с 2001 года в рамках работ над системой машинного перевода "Кросслятор".
+				</li><br />
+				<li><a name="FSTMorph"></a><strong>FSTMorph / ФСТМорф</strong><br />
+				Морфологический парсер FSTMorph, разработанный в лаборатории компьютерной лингвистики ИППИ РАН, состоит из двух частей: 1) модуля получения возможных разборов на основе конечного автомата и 2) модуля частичного разрешения грамматической омонимии по линейному контексту на основе правил.<br />
+				Кроме того, в дополнение к этому парсеру имеются простые алгоритмы для следующих задач:<br /> 
+				1) разбиение текста на предложения и слова, <br />
+				2) определение типа капитализации слов (регулярная капитализация типа <i>Москва</i>, <i>Юля</i>, окказиональная полная или частичная капитализация типа <i>Человек</i> с большой буквы или <i>ЛЮБЛЮ</i>, <i>ЦЕЛУЮ</i>, окказиональное отсутствие требуемой правилами капитализации типа <i>москва</i>, <i>юля</i><br />
+				3) обработка цифровых выражений. <br />
+				Объем русского морфологического словаря - более 120 тыс. лексических единиц.
+				</li><br />
+				<li><a name="FSTMorphETAP3"></a><strong>FSTMorph + ETAP-3 / ФСТМорф + ЭТАП-3</strong><br />
+				FSTMorph + Синтаксический анализатор (СА), который является частью лингвистического процессора ЭТАП-3 – полифункциональной системы обработки текста на ЕЯ. Для каждого предложения СА строит синтаксическую структуру в виде дерева зависимостей. В процессе построения структуры специальные правила (синтагмы) проводят все допустимые с их точки зрения бинарные синтаксические отношения между словами (точнее говоря - между морфологическими представлениями слов, т.е. лемма + набор словоизменительных грамматических характеристик). Затем из полученного набора отношений выделяется дерево зависимостей. В процессе генерации дерева зависимостей происходит полная дизамбигуация неоднозначных морфологических разборов.<br />
+				Объем используемого СА русского комбинаторного словаря (в котором представлена синтаксически чувствительная информация для каждого слова, включая синтаксические признаки и модели управления), - около 100 тыс. лексических единиц.
+				</li><br />
+				<li><a name="Libmorphrus"></a><strong><a href="http://www.keva.ru">Libmorphrus</a></strong><br />
+				Морфологический анализатор реализован в виде динамической библиотеки с экспортируемыми функциями в стиле "C". Есть также PHP-версия. Размер библиотеки со словарем - немногим более двух Mb. Высокая производительность анализатора - около ста тысяч слов в секунду в режиме полной лемматизации - обеспечивается оригинальной структурой словаря.
+				</li><br />
+				<li><a name="Mocky"></a><strong><a href="http://corpus.leeds.ac.uk/mocky/">Mocky</a></strong><br />
+				Анализатор построен на статистической модели триграмм (одна модель использует TnT, другая TreeTagger). Принципы работы и оценка качества описаны <a href="http://corpus.leeds.ac.uk/mocky/lrec2008-msd.pdf">здесь</a>.
+				</li><br />
+				<li><a name="Mystem"></a><strong><a href="http://company.yandex.ru/technology/mystem">Mystem</a></strong><br />
+				Программа Mystem производит морфологический анализ текста на русском языке. Для слов, отсутствующих в словаре, порождаются гипотезы на основании частотности суффиксов.
+				</li><br />
+				<li><a name="Mystem+FastDictionary"></a><strong>Mystem + FastDictionary</strong><br />
+				Mystem + новый модуль для работы со словами, отсутствующими в словаре.
+				</li><br />
+				<li><a name="Mystem+LightDisamb"></a><strong>Mystem + LightDisamb</strong><br />
+				Mystem + "легкая" статистическая процедура снятия омонимии на основе биграммной статистики, с обучением по неразмеченному корпусу.
+				</li><br />
+				<li><a name="Polymorph"></a><strong><a href="http://feb-web.ru/febupd/parser/parse.htm">Polymorph / Полиморф</a></strong><br />
+				Парсер содержит грамматический словарь на 110 тыс. слов, в основном соответствующий словарю А.А. Зализняка. Для отсутствующих в словаре слов парсер строит вполне разумные гипотезы, построенные на основе анализа большого массива текстов.
+Парсер может обрабатывать тексты в старой орфографии и правильно анализирует устаревшие формы типа <i>новаго</i>, <i>новыя</i>, <i>нову</i>, <i>пришед</i>, <i>скоряе</i> и т.д.
+				</li><br />
+				<li><a name="Pymorphy"></a><strong><a href="http://bitbucket.org/kmike/pymorphy/">Pymorphy</a></strong><br />
+				Некоммерческий open-source проект, который базируется на исследованиях aot.ru. Алгоритмы, используемые для морфологического анализа, - по сути, те же, что и на aot.ru, но их реализация упрощена. Это позволило добиться короткого, понятного и расширяемого кода (удобного для исследований и быстрой доработки) ценой потерь в производительности.
+				</li><br />
+				<li><a name="RCO"></a><strong><a href="http://www.rco.ru/product.asp?ob_no=2871&part=docs">RCO Morphology</a></strong><br />
+				Коммерческий морфоанализатор, работающий в составе лингвистических анализаторов RCO. Библиотека RCO Morphology SDK предназначена для морфологического анализа слов русского языка в информационно-поисковых системах и позволяет решать следующие задачи:<br />
+получать нормальную форму слова, заданного в любой грамматической форме;<br />
+получать все грамматические формы слова, заданного в любой грамматической форме.<br />
+Библиотека включает в себя: <br />
+точный анализ известных слов по словарю объемом более 115 тысяч слов, что покрывает более 3-х миллионов словоформ; <br />
+высоко достоверный анализ неизвестного слова на основе комплекса правил словообразования и словоизменения; <br />
+вероятностный анализ посредством соотнесения с моделями словоизменения часто встречающихся слов на основе оценки флективной и суффиксальной частей слова.<br />
+Объем бинарного словаря - 3 МБайта. <br />
+Скорость морфологического анализа – более 100 тысяч слов в секунду (Процессор AMD Athlon, 1000 МГц). <br />
+Продукт поставляется в виде динамической библиотеки (dll) для Windows.
+				</li><br />
+				<li><a name="RDMAIPII"></a><strong>RDMA_IAI / РДМА_ИПИИ</strong><br />
+				Модуль декларативного морфологического анализа ИПИИ (Украина, Донецк) в явном виде хранит парадигмы слов (около 3 млн. словоформ, из которых 1.9 млн. уникальных строк). Каждая словоформа снабжена морфологической информацией. Модуль использует метод скоростного поиска строковых величин в словарях сверхбольших объёмов. Представляет собой совокупность средств морфологического анализа и синтеза. Оснащён подсистемой бессловарного морфологического анализа.
+				</li><br />
+				<li><a name="SemantarusMorpho"></a><strong>Semantarus Morpho / Семантарус Морфо</strong><br />
+				Алгоритм морфоанализа О.С.Кулагиной, работающий на словнике словаря А.А.Зализняка с добавлением вероятностного определения грамм характеристик. Морфоанализатор является частью системы синтаксического анализа естестввенноязыковых текстов.
+				</li><br />
+				<li><a name="Starling"></a><strong><a href="http://starling.rinet.ru/morpho.php">Starling</a></strong><br />
+				Модуль морфологического анализа системы Starling. Парсер работает со словарем Зализняка в его "книжном" представлении, т.е. программа понимает описания вокабул непосредственно в том виде, который принят в словаре. Правила анализа скрыты в коде анализатора -- метаязыка для описания правил не предусмотрено. Для любой формы любого слова из словаря программа способна определить: <br />
+ a) исходную слоформу; <br />
+ b) словарную информацию, то есть морфологический индекс и имеющиеся комментарии из словаря; <br />
+ c) морфологическую характеристику слова. В случае многозначности введенной формы рассматриваются все варианты анализа; <br />
+ d) место ударения. <br />
+Кроме того, программа способна синтезировать акцентуированные парадигмы для каждого из результатов анализа. <br />
+Существует две версии программы. Одна написана на языке Clipper (xBase,xHarbour), другая на языке C.
+				</li><br />
+				<li><a name="TextAn"></a><strong>TextAn / ТекстАн</strong><br />
+Морфологический анализатор использует базы данных на 145 тыс. слов, построенные по словарю В.А.Тузова. Результат морфологического разбора каждого слова подается на модуль снятия неоднозначностей, в качестве которого используется система элементов типа “Очередь”, позволяющая хранить результаты анализа восьми слов (каждое слово может иметь до шести вариантов разбора). Функционирование модуля подчиняется определенным правилам, которые оформлены в виде процедур. При поступлении результата разбора очередного слова в системе осуществляется сдвиг информации справа на¬лево. При этом результат разбора записывается в последний элемент, а информация из первого элемента выводится из системы в качестве окончательного результата в виде леммы и морфологической информации.
+				</li>
+			</ul>
+		</article>
+
+		<article>
+			<h4>Таблица участия</h4>
+			<p>Были получены заявки от 15 групп разработчиков, некоторые разработчики представляют несколько вариантов программ. Таблица заявок по дорожкам:</p>
+		</article>
+
+		<article>
+<table class="participantsTable">
+<tr><td>&nbsp;&nbsp;</td>
+<th><span class="menuIt">&nbsp;<a href="track_lemma.html">ЛЕММАТИЗАЦИЯ</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;&nbsp;<a href="track_pos.html">POS</a>&nbsp;&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_gram.html">МОРФОЛОГИЯ</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_rare.html">РЕДКИЕ СЛОВА</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_scan.html">КОЛЛЕКЦИИ: "ГРЯЗНЫЕ" ТЕКСТЫ</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_lemma_disamb.html">ДИЗАМБИГУАЦИЯ: ЛЕММЫ</a>&nbsp;</span></th>
+<th><span class="menuIt">&nbsp;<a href="track_pos_disamb.html">ДИЗАМБИГУАЦИЯ: POS</a>&nbsp;</span></th>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#AOT">АОТ</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#ARME">ARME</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Cirmorph">Cir_morph</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Crosslator">Crosslator</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#FSTMorph">FSTMorph</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#FSTMorphETAP3">FSTMorph + ETAP-3</a>&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Libmorphrus">Libmorphrus</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Mocky">Mocky</a>&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Mystem">Mystem</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Mystem+FastDictionary">Mystem + FastDictionary</a>&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Mystem+LightDisamb">Mystem + LightDisamb</a>&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Polymorph">Polymorph</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Pymorphy">Pymorphy</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#RCO">RCO Morphology</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#RDMAIAI">RDMA_IAI</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#SemantarusMorpho">Semantarus Morpho</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#Starling">Starling</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+</tr><tr>
+<td class="cellPart">&nbsp;<a href="#TextAn">TextAn</a>&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellMinus">&nbsp;&#9472;&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+<td class="cellPlus">&nbsp;+&nbsp;</td>
+</tr>
+</table>
+		</article>
+	</section>
+
+	<section>
+		<a name="results"></a>
+		<h3>Результаты RU-EVAL 2010</h3>
+		<article>
+			<p>В 2010 году было получено 13 ответов систем по дорожкам «Лемматизация» и «POS», 12 ответов по дорожке «Морфология», 8 ответов по дорожке «Редкие слова» и 7 ответов по обеим дорожкам с дизамбигуацией. Ответы одного участника по дорожкам «Лемматизация», «POS» и «Морфология» были дисквалифицированы за несоответствие формата данных и не участвовали в экспертизе.</p>
+		</article>
+		<article>
+			<h4>Дорожки без дизамбигуации</h4>
+			<div align="left" height="100 px">
+			<a href="../static/images/NonDisambTable.GIF"><img src="../static/images/NonDisambTable.GIF" name="Таблица оценок по дорожкам без дизамбигуации" style="margin-left:5px; width:80% ;"/></a></div>
+			<div align="left">
+			<a href="../static/images/NonDisambDiagram.GIF"><img src="../static/images/NonDisambDiagram.GIF" name="Результаты по дорожкам без дизамбигуации" style="margin-left:5px; width:100% ;"/></a></div>
+		</article>
+		<article>
+			<h4>Дорожка "Редкие слова"</h4>
+			<div align="left"><a href="../static/images/RareTable.GIF"><img src="../static/images/RareTable.GIF" name="Результаты по дорожкам без дизамбигуации" style="margin-left:5px; width:30% ;"/></a>
+			<a href="../static/images/RareDiagram.GIF"><img src="../static/images/RareDiagram.GIF" name="Результаты по дорожкам без дизамбигуации" style="margin-left:25px; width:35% ;"/></a></div>
+		</article>
+		<article>
+			<h4>Дорожки с дизамбигуацией</h4>
+			<div align="left">
+			<a href="../static/images/DisambTable.GIF"><img src="../static/images/DisambTable.GIF" name="Результаты по дорожкам с дизамбигуации" style="margin-left:5px; width:60% ;" /></a></div>
+			<div align="left">
+<a href="../static/images/DisambDiagram.GIF"><img src="../static/images/DisambDiagram.GIF" name="Результаты по дорожкам с дизамбигуации" style="margin-left:5px; width:65% ;"/></a></div>
+		</article>
+	</section>
+
+	  </div>
+	  <div id="footer">
+	  	<div style="float: right;">
+	  	    2015-2017 @ RU-EVAL team <br />
+            <span title="Лицензия CC BY-SA 4.0"><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" class="image"><img alt="" src="img/cc-by-sa.png" width="44" height="16" /></a></span>
+		</div>
+	        Портал создан при поддержке РФФИ, проект No 15-07-09306 "Стандарты оценки методов автоматического извлечения информации из текстов"
+	  </div>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+  </body>
+
+</html>
