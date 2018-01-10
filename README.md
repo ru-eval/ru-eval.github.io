@@ -1,3 +1,3 @@
 # Evaluation methods for Russian NLP
-ru-eval.github.io
+<a href="ru-eval.github.io">ru-eval.github.io</a>
 
