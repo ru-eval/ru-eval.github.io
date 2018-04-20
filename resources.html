@@ -13,6 +13,14 @@
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+	function download(path) 
+	{
+    		var ifrm = document.getElementById("iframe1");
+    		ifrm.src = path;
+	}
+   </script>
+
   </head>
   <body>
     <div class="wrapper">
@@ -93,7 +101,12 @@
 		<h4>Словарные ресурсы</h4>
 		<p>Грамматический словарь русского языка А. А. Зализняка (файл <a href="http://ru-eval.ru/go/data/zalizniak2003.xls.zip">xls</a>, <a href="http://ru-eval.ru/go/data/AspectualPairZalizniak.txt">txt</a>, на сайтах проектов <a href="http://starling.rinet.ru/morpho.php?lan=en">StarLing</a>, <a href="http://odict.ru/">odict.ru</a>)</p>
 		<p>Префиксальные видовые глагольные пары (база проекта <a href="http://emptyprefixes.uit.no/">Exploring Emptiness</a>)</p>		
-		<p>Суффиксальные видовые глагольные пары (по словарю А. А. Зализняка, <a href="http://ru-eval.ru/go/data/ImpToPerf.txt" target="_blank" download>простая таблица</a>, больше информации в <a href="http://ru-eval.ru/go/data/AspectualPairZalizniak.xls" target="_blank" download>xls</a>, <a href="http://ru-eval.ru/go/data/AspectualPairZalizniak.txt" target="_blank" download>txt</a>)</p>
+		<p>Суффиксальные видовые глагольные пары (по словарю А. А. Зализняка, 
+				<iframe id="iframe1" style="display:none;"></iframe>
+				<a href="javascript:download('http://ru-eval.ru/go/data/ImpToPerf.txt')">простая таблица</a>,
+				больше информации в <a href="http://ru-eval.ru/go/data/AspectualPairZalizniak.xls" target="_blank" download>xls</a>, 
+					<iframe id="iframe1" style="display:none;"></iframe>
+					<a href="javascript:download('http://ru-eval.ru/go/data/AspectualPairZalizniak.txt')">txt</a>)</p>
 		<p><a href="http://www.slioussar.ru/verbdatabase.html">База</a> русских глаголов Н. Слюсарь (по словарю А. А. Зализняка)</p>
 		<p><a href="http://marker.framebank.ru/verbs.php">Русские глаголы: конструкции и фразеология</a> (база проекта ФреймБанк)</p>
 		<p>Словари в формальном представлении (для машинной обработки): 
